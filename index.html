@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS LINK -->
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>Tasks Management System</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Tasks Management System</h1>
+
+        <!-- Top Input Row: Task Name, Task Description, and Add Button -->
+        <div class="task-input-row">
+            <input type="text" id="taskName" placeholder="Enter Task Name">
+            <input type="text" id="taskDescription" placeholder="Enter Task Description">
+            <button type="button" id="addBtn">+ Add Task</button>
+        </div>
+
+        <!-- Tasks Table -->
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Table rows for tasks will go here -->
+                
+            </tbody>
+        </table>
+    </div>
+
+    <div class="modal-update">
+     <div class="task-input-row">
+        <input type="text" id="updateTaskName" placeholder="Enter Task Name">
+        <input type="text" id="updateTaskDescription" placeholder="Enter Task Description">
+        <button type="button" id="updateBtn">+ update Task</button>
+    </div>
+</div>
+
+    <!-- JS LINK -->
+   <script src="./js/script.js"></script>
+
+</body>
+
+</html>

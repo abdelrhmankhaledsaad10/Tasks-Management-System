@@ -116,3 +116,40 @@ td {
         margin-top: 400px;
     }
 }
+
+
+/* Style for Action Buttons Container/Cell */
+td button {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+/* Delete Button Style (Modern Soft Red) */
+td button.btn-delete,
+td button:nth-child(1) {
+    background-color: #fee2e2;
+    color: #991b1b;
+    margin-right: 6px;
+}
+
+td button.btn-delete:hover,
+td button:nth-child(1):hover {
+    background-color: #fecaca;
+}
+
+/* Update Button Style (Modern Soft Blue) */
+td button.btn-update,
+td button:nth-child(2) {
+    background-color: #e0f2fe;
+    color: #075985;
+}
+
+td button.btn-update:hover,
+td button:nth-child(2):hover {
+    background-color: #bae6fd;
+}

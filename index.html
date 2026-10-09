@@ -34,21 +34,27 @@
             </thead>
             <tbody>
                 <!-- Table rows for tasks will go here -->
-                
+
             </tbody>
         </table>
     </div>
 
     <div class="modal-update">
-     <div class="task-input-row">
-        <input type="text" id="updateTaskName" placeholder="Enter Task Name">
-        <input type="text" id="updateTaskDescription" placeholder="Enter Task Description">
-        <button type="button" id="updateBtn">+ update Task</button>
+        <div class="task-input-row">
+            <input type="text" id="updateTaskName" placeholder="Enter Task Name">
+            <input type="text" id="updateTaskDescription" placeholder="Enter Task Description">
+            <select id="updateTaskStatus">
+                <option value="false">Not Done</option>
+                <option value="true">Done</option>
+            </select>
+            <button type="button" id="updateBtn">+ update Task</button>
+        </div>
     </div>
-</div>
+    </div>
 
     <!-- JS LINK -->
-   <script src="./js/script.js"></script>
+    <script src="./js/script.js"></script>
+
 
 </body>
 

@@ -40,7 +40,8 @@ h1 {
     margin-bottom: 15px;
 }
 
-.task-input-row input {
+.task-input-row input,
+.task-input-row select {
     flex: 1;
     padding: 10px 14px;
     border: 1px solid #cccccc;
@@ -48,10 +49,11 @@ h1 {
     font-size: 0.95rem;
     outline: none;
     transition: border-color 0.2s;
+    background-color: #ffffff;
 }
 
 .task-input-row input:focus,
-.search-row input:focus {
+.task-input-row select:focus {
     border-color: #007bff;
 }
 
@@ -93,28 +95,42 @@ th {
     font-weight: 600;
 }
 
-/* Optional styling for table body cells when you add rows later */
 td {
     padding: 12px 16px;
     border-bottom: 1px solid #eeeeee;
     font-size: 0.9rem;
 }
 
+/* Modal Styling (Centered properly) */
 .modal-update {
     position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100vh;
-    background-color: rgba(0, 0, 0, .6);
+    background-color: rgba(0, 0, 0, 0.6);
     display: none;
     justify-content: center;
     align-items: center;
+    padding: 20px;
+    z-index: 1000;
+}
 
-    .task-input-row {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-top: 400px;
-    }
+.modal-update .task-input-row {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 450px;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.modal-update .task-input-row button {
+    width: 100%;
+    padding: 10px;
 }
 
 
@@ -152,4 +168,59 @@ td button:nth-child(2) {
 td button.btn-update:hover,
 td button:nth-child(2):hover {
     background-color: #bae6fd;
+}
+
+
+/* =========================================
+   RESPONSIVE MEDIA QUERIES (Tablet & Mobile)
+   ========================================= */
+
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 20px;
+    }
+
+    /* Stack main input form vertically on tablets/phones */
+    .task-input-row {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .task-input-row button {
+        width: 100%;
+        padding: 12px;
+    }
+
+    /* Make table scrollable horizontally if screen gets too narrow */
+    .container table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        align-items: flex-start;
+        padding-top: 20px;
+    }
+
+    .container {
+        width: 100%;
+        border-radius: 0;
+        padding: 15px;
+        box-shadow: none;
+    }
+
+    h1 {
+        font-size: 1.3rem;
+        margin-bottom: 15px;
+    }
+
+    th,
+    td {
+        padding: 10px 10px;
+        font-size: 0.85rem;
+    }
 }
